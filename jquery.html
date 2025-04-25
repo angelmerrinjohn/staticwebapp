@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>JQUERY CALCULATOR</title>
+    <script src = "C:\Users\betti\OneDrive\Desktop\Web Dev\jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //action button click
+            $("#addbt").click(function(){
+                var n1 = parseInt($('#n1').val())
+                var n2 = parseInt($('#n2').val())
+                var result = n1 + n2
+                $('#output1').html("Result:"+ result)
+                $('#output2').val(result)
+            })
+            $("#multiply").click(function(){
+                var n1 = parseInt($('#n1').val())
+                var n2 = parseInt($('#n2').val())   
+                var result = n1 * n2
+                $('#output1').html("Result:"+ result)
+                $('#output2').val(result)                            
+            })
+            $("#subtract").click(function(){
+                var n1 = parseInt($('#n1').val())
+                var n2 = parseInt($('#n2').val())
+                var result = n1-n2
+                $('#output1').html("Result" + result)
+                $('#output2').val(result)
+            })
+            $('#divide').click(function(){
+                var n1 = parseInt($('#n1').val())
+                var n2 = parseInt($('#n2').val())
+                var result = n1/n2
+                $('#output1').html("Rseult:"+ result)
+                $('#output2').val(result)
+            })
+        })
+    </script>
+    </head>
+    <body>
+        Number1: <input type="text" id="n1"><br><br>
+        Number2: <input type="text" id="n2"><br><br>
+        <button id="addbt">Add</button>
+        <button id="multiply">Multiply</button>
+        <button id="subtract">Subtract</button>
+        <button id="divide">Divide</button>
+        <!-- <button id="bt">Save Details</button> -->
+        <div id="output1"></div>
+        <input type="text" readonly id="output2">
+    </body>
+</html>
